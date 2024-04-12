@@ -1,0 +1,126 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Estilos básicos */
+body {
+    background-color: #f6f8fc;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Conteúdo principal */
+.content {
+    width: 100%;
+    padding: 1rem;
+    background-color: white;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+/* Lista de Pokémons */
+.pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem; /* Espaçamento entre os itens */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pokemons li {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+/* Layout responsivo */
+@media screen and (min-width: 576px){
+    .pokemons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px){
+    .pokemons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .content {
+        max-width: 992px;
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+
+    .pokemons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Ajustes adicionais */
+@media screen and (max-width: 320px){
+    .pokemons li {
+        padding: 0.5rem;
+    }
+}
+    
+
+
+    
+
+.pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: .2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #49d0b6;
+    color: white;
+    
+}
+
+.pokemon .number {
+    color: black;
+    text-align: right;
+}
+
+.pokemon .name {
+    color: white;
+    margin-bottom: 0;;
+    font-size: 1.5rem; /* Tamanho do nome aumentado */
+}
+
+
+.pokemon .detail{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pokemon .detail .types {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 25px;
+}
+
+.pokemon .detail .types .type {
+    background-color: #49d0b6;
+    color: white;
+    padding: 0;
+    margin: .50rem;
+    font-size: 1.50rem;
+    border-radius: 1.50rem;
+
+
+}
+
+.pokemon.detail img {
+    max-width: 50%;
+    height: 30px;
+
+
+}
